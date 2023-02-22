@@ -1,0 +1,20 @@
+data.dropna(subset=["Id"])
+
+MOSTRAR DATOS NULOS 
+Y BORRARLOS=
+
+totpre=df1["price"].isnull()
+totpre=totpre.dropna()
+totpre
+
+CONVERTIR A DOMMIES UNA COLUMNA=
+precio=pd.get_dummies(df1["price_usd_per_m2"])
+precio
+
+VALORES DE LA COLUMNA EN ORDEN ASCENDENTE=
+pd.get_dummies(df1["place_name"]).sum().sort_values(ascending=False)
+
+CAMBIO DE UN VALOR EN UNA COLUMNA=
+df["floor"].loc(df["floor"].value_counts() > 50)
+df["floor"].value_counts() > 50
+df["floor"].where(dfN.floor<20, 1)
